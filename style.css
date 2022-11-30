@@ -1,0 +1,342 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7%;
+  background: #0a1c04;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo img {
+  width: 105px;
+  cursor: pointer;
+}
+.navbar ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navbar ul li {
+  margin: 0 10px;
+}
+.navbar ul li a {
+  color: #fff;
+  font-size: 1.7rem;
+  position: relative;
+}
+.navbar ul li a::after {
+  content: "";
+  background: #92e7aa;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  height: 2px;
+  width: 100%;
+  transition: transform 0.5s ease;
+  opacity: 0s;
+}
+.navbar ul li a:hover::after {
+  transform: translateY(-20px);
+  opacity: 1;
+}
+.navbar .logout {
+  background: red;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.home {
+  padding: 1rem 7%;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #92e7aa;
+  padding: 1rem 8%;
+}
+.home .content {
+  margin-top: 10rem;
+  /* padding: 2rem; */
+  /* display: flex;
+    flex-direction: column;
+    /* justify-content: center;
+    align-items: center; */
+}
+.home .content h1 {
+  font-size: 2.5rem;
+  padding-bottom: 1.5rem;
+  color: #0a1c04;
+  font-weight: 600;
+}
+.home h2 {
+  font-size: 2.4rem;
+  padding-bottom: 1.5rem;
+  color: rgb(114, 85, 6);
+  letter-spacing: 0.1rem;
+}
+.btn {
+  display: inline-block;
+  background: #0a1c04;
+  color: #fff;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 25px;
+  border: 0;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #ffffff;
+  color: #0a1c04;
+  transition: 1s ease-in;
+}
+
+.home .content-span {
+  position: absolute;
+  right: 12rem;
+  top: 35rem;
+}
+.home .content-span span {
+  font-size: 3rem;
+  font-style: italic;
+}
+
+/* ======== form section starts ======= */
+main {
+  width: 40%;
+  height: 300px;
+  position: absolute;
+  right: 13rem;
+  top: 5rem;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 7px;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+}
+#login-error-msg-holder {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+#login-error-msg {
+  width: 23%;
+  text-align: center;
+  margin: 0;
+  padding: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #8a0000;
+  border: 1px solid #8a0000;
+  background-color: #e58f8f;
+  opacity: 0;
+}
+#error-msg-second-line {
+  display: block;
+}
+#login-form {
+  align-self: flex-start;
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 50%;
+  padding: 1rem;
+}
+.login-form-field::placeholder {
+  color: #3a3a3a;
+  font-size: 1.9rem;
+}
+main input {
+  background-color: transparent;
+}
+.login-form-field {
+  border: none;
+  border-bottom: 1px solid #3a3a3a;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  outline: none;
+  padding: 0px 0px 9px 9px;
+  width: 100%;
+}
+
+#login-form-submit {
+  width: 100%;
+  padding: 10px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  background-color: #3a3a3a;
+  cursor: pointer;
+  outline: none;
+}
+#login-form-submit:hover {
+  color: #fff;
+  background: #1e4711;
+}
+/* ======== form section ends ======= */
+/* ========== slider section starts============ */
+.slider-holder{
+  position: absolute;
+  padding-top: 1rem;
+  width: 30%;
+  height: 40vh;
+  right: 13rem;
+  border-radius: 2%;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.4);
+  background-image: url(/images/slider1.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 100px auto;
+  animation: slide 8s infinite;
+}
+
+@keyframes slide {
+  25% {
+    background-image: url(images/slider2.jpg);
+  }
+  50% {
+    background-image: url(images/slider3.jpg);
+  }
+  100% {
+    background-image: url(images/slider1.jpg);
+  }
+}
+/* ========== slider section ends============ */
+section {
+  width: 100%;
+  height: auto;
+  padding: 1rem 7%;
+  background: #92e7aa;
+  position: relative;
+}
+table {
+  width: 80%;
+  height: auto;
+  background: #fff;
+  color: #333;
+  border-radius: 10px;
+  margin: 1rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+  font-size: 1.1rem;
+}
+
+table thead tr th {
+  background: #0a1c04;
+  color: #fff;
+}
+table tbody tr:nth-child(even) {
+  background-color: #e2e2e2;
+}
+
+table tbody td:nth-child(3) {
+  color: blue;
+  font-weight: 600;
+}
+table tbody td:nth-child(5) {
+  color: red;
+  font-weight: 600;
+}
+table tbody td:nth-child(7) {
+  color: #1e4711;
+  font-weight: 600;
+}
+.dataTables_wrapper .dataTables_filter input {
+  margin-bottom: 10px;
+  border: 1px solid #0a1c04;
+}
+
+.dataTables_wrapper .dataTables_length select {
+  border: 1px solid #0a1c04;
+}
+label {
+  font-size: 1.2rem;
+}
+
+footer {
+  width: 100%;
+  /*padding: 1rem 7%;*/
+  background: #000;
+  height: 15vh;
+  position: absolute;
+  padding-top: 10px;
+}
+footer .footer_col {
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #fff;
+  font-size: 1.7rem;
+}
+.footer_col {
+  animation-duration: 5s;
+  animation-name: glissement;
+  animation-iteration-count: infinite;
+}
+@keyframes glissement {
+  from {
+    margin-right: 80%;
+    width: 40%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+/* =====Loader===== */
+.loader{
+  background: #000;
+  position: absolute;
+  width: 100%;
+  height: 155vh;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader span{
+  font-size: 2rem;
+  color: #fff;
+  margin: .8rem;
+}
+.loader img{
+  width: 5rem;
+  top: 20%;
+  border-radius: 5rem;
+  background: #1e4711;
+}
+
+/* =========slider========== */
+/* .slider {
+  position: absolute;
+  width: 20%;
+  height: 18vh;
+  border-radius: 5%;
+  background-image: url(/images/slider1.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 100px auto;
+  animation: slide 8s infinite;
+} */
